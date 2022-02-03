@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
-let preferredHeight = 600
+let preferredWidth = 400
+let preferredHeight = 650
 /*:
  ## Required code
  
@@ -41,11 +41,27 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
+
 
 // Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
+canvas.drawAxes(withScale: true, by: 50, color: .black)
+
+
+canvas.fillColor = Color(hue: 193, saturation: 99, brightness: 86, alpha: 80)
+
+canvas.drawRectangle(at: Point (x: 0, y: 0), width: 400, height: 650)
+
+
+// dirst layer of circles
+
+canvas.drawShapesWithFill = false
+canvas.drawShapesWithBorders = true
+
+canvas.borderColor = Color(hue: 33, saturation: 53, brightness: 93, alpha: 100)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 20, height: 20, borderWidth: 20)
+
+
 
 /*:
  ## Add your code
@@ -56,22 +72,6 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
  */
 
-// Begin writing your code below (you can remove the examples shown)
-
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
-
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
-
-// Go back to origin
-p.goToOrigin()
-
-// Change the pen color
-p.penColor = .red
-
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
 
 /*:
  ## Show the Live View

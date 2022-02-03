@@ -1,10 +1,10 @@
 //: [Previous](@previous) / [Next](@next)
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
+let preferredWidth = 400
 let preferredHeight = 600
 /*:
  ## Required code
@@ -40,38 +40,74 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
 
-// Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
+
+
+
 
 /*:
  ## Add your code
  
  Beginning on line 61, you can add your own code.
-  
+ 
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
+//background colour
 
-// Begin writing your code below (you can remove the examples shown)
+canvas.fillColor = Color (hue: 230, saturation: 50, brightness: 19, alpha: 100)
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
+canvas.drawRectangle(at: Point (x: 0, y: 0), width: 400, height: 600)
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+// Pavement text
 
-// Go back to origin
-p.goToOrigin()
+canvas.fillColor = Color (hue: 27, saturation: 65, brightness: 84, alpha: 100)
 
-// Change the pen color
-p.penColor = .red
+canvas.drawText(message: "Pavement", at: Point (x: 25, y: 375))
 
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+//colour for bg triangles
+
+canvas.fillColor = Color (hue: 253, saturation: 40, brightness: 30, alpha: 100)
+
+
+canvas.drawRectangle(at: Point (x: 0, y: 350), width: 400, height: 250)
+
+// loop for bg triangles
+canvas.highPerformance = true
+for xPosition in stride (from: 0, to: 400, by: 50) {
+    for yPosition in stride(from: 0, to: 350, by: 50) {
+        
+        // Express the vertices of the custom figure
+        var figureVertices: [Point] = []
+        figureVertices.append(Point(x: xPosition + 0, y: yPosition + 50))
+        figureVertices.append(Point(x: xPosition + 0, y: yPosition + 0))
+        figureVertices.append(Point(x: xPosition + 25, y: yPosition + 0))
+        
+        
+        // Draw a single figure using absolute values
+        canvas.drawCustomShape(with: figureVertices)
+        
+        
+        
+        // Express the vertices of the custom figure
+        var figureVertices2: [Point] = []
+        figureVertices2.append(Point(x: xPosition + 25, y: yPosition + 0))
+        figureVertices2.append(Point(x: xPosition +  50, y: yPosition + 0))
+        figureVertices2.append(Point(x: xPosition + 50, y: yPosition + 50))
+        
+        
+        // Draw a single figure using absolute values
+        canvas.drawCustomShape(with: figureVertices2)
+        
+    }
+}
+
+canvas.highPerformance = false
+
+
+
+// Show a grid
+canvas.drawAxes(withScale: true, by: 50, color: .white)
 
 /*:
  ## Show the Live View
@@ -80,7 +116,7 @@ p.addArc(radius: 50, angle: -45)
  Remember to show the Live View (1 then 2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
@@ -88,3 +124,6 @@ p.addArc(radius: 50, angle: -45)
  
  ![source_control](source-control.png "Source Control")
  */
+
+
+
