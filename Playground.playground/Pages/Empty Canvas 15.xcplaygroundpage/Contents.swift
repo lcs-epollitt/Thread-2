@@ -186,18 +186,247 @@ canvas.drawEllipse(at: Point (x: 350, y: 50), width: 10, height: 10)
 
 // eyelashes
 
+
+canvas.fillColor = Color (hue: 230, saturation: 50, brightness: 19, alpha: 100)
+// eyelash 1
+
+
 // Express the vertices of the custom figure
 var figureVertices5: [Point] = []
 figureVertices5.append(Point(x: 150, y: 150))
-figureVertices5.append(Point(x: 140, y: 160))
-figureVertices5.append(Point(x:  160, y: 160))
-figureVertices5.append(Point(x: 165, y: 165))
+figureVertices5.append(Point(x: 150, y: 170))
+figureVertices5.append(Point(x:  190, y: 150))
 
 canvas.drawCustomShape(with: figureVertices5)
 
 canvas.highPerformance = false
 
+// eyelash 2
 
+// Express the vertices of the custom figure
+var figureVertices6: [Point] = []
+figureVertices6.append(Point(x: 160, y: 160))
+figureVertices6.append(Point(x: 160, y: 180))
+figureVertices6.append(Point(x:  200, y: 150))
+
+canvas.drawCustomShape(with: figureVertices6)
+
+canvas.highPerformance = false
+
+
+// eyelash 3
+
+// Express the vertices of the custom figure
+var figureVertices7: [Point] = []
+figureVertices7.append(Point(x: 170, y: 170))
+figureVertices7.append(Point(x: 170, y: 190))
+figureVertices7.append(Point(x:  210, y: 150))
+
+canvas.drawCustomShape(with: figureVertices7)
+
+canvas.highPerformance = false
+
+// eyelash 4
+
+// Express the vertices of the custom figure
+var figureVertices8: [Point] = []
+figureVertices8.append(Point(x: 180, y: 180))
+figureVertices8.append(Point(x: 180, y: 200))
+figureVertices8.append(Point(x:  220, y: 150))
+
+canvas.drawCustomShape(with: figureVertices8)
+
+canvas.highPerformance = false
+
+// eyelash 5
+
+// Express the vertices of the custom figure
+var figureVertices9: [Point] = []
+figureVertices9.append(Point(x: 190, y: 180))
+figureVertices9.append(Point(x: 190, y: 205))
+figureVertices9.append(Point(x: 200, y: 190))
+
+canvas.drawCustomShape(with: figureVertices9)
+
+canvas.highPerformance = false
+
+
+// eyelash 6
+
+// Express the vertices of the custom figure
+var figureVertices10: [Point] = []
+figureVertices10.append(Point(x: 200, y: 190))
+figureVertices10.append(Point(x: 210, y: 205))
+figureVertices10.append(Point(x: 210, y: 180))
+
+canvas.drawCustomShape(with: figureVertices10)
+
+canvas.highPerformance = false
+
+// eyelash 7
+
+// Express the vertices of the custom figure
+var figureVertices11: [Point] = []
+figureVertices11.append(Point(x: 205, y: 180))
+figureVertices11.append(Point(x: 220, y: 200))
+figureVertices11.append(Point(x: 220, y: 170))
+
+canvas.drawCustomShape(with: figureVertices11)
+
+canvas.highPerformance = false
+
+// eyelash 8
+
+// Express the vertices of the custom figure
+var figureVertices12: [Point] = []
+figureVertices12.append(Point(x: 210, y: 170))
+figureVertices12.append(Point(x: 230, y: 190))
+figureVertices12.append(Point(x: 230, y: 160))
+
+canvas.drawCustomShape(with: figureVertices12)
+
+canvas.highPerformance = false
+
+// eyelash 9
+
+// Express the vertices of the custom figure
+var figureVertices13: [Point] = []
+figureVertices13.append(Point(x: 215, y: 160))
+figureVertices13.append(Point(x: 240, y: 180))
+figureVertices13.append(Point(x: 240, y: 150))
+
+canvas.drawCustomShape(with: figureVertices13)
+
+canvas.highPerformance = false
+
+// eyelash 10
+
+// Express the vertices of the custom figure
+var figureVertices14: [Point] = []
+figureVertices14.append(Point(x: 220, y: 150))
+figureVertices14.append(Point(x: 250, y: 170))
+figureVertices14.append(Point(x: 250, y: 150))
+
+canvas.drawCustomShape(with: figureVertices14)
+
+canvas.highPerformance = false
+
+// eyelash 11
+
+// Express the vertices of the custom figure
+var figureVertices15: [Point] = []
+figureVertices15.append(Point(x: 250, y: 150))
+figureVertices15.append(Point(x: 240, y: 140))
+figureVertices15.append(Point(x: 250, y: 130))
+
+canvas.drawCustomShape(with: figureVertices15)
+
+canvas.highPerformance = false
+
+// eyelash 12
+
+// Express the vertices of the custom figure
+var figureVertices16: [Point] = []
+figureVertices16.append(Point(x: 245, y: 150))
+figureVertices16.append(Point(x: 227, y: 140))
+figureVertices16.append(Point(x: 240, y: 125))
+
+canvas.drawCustomShape(with: figureVertices16)
+
+canvas.highPerformance = false
+
+// eyelash 13
+
+// Express the vertices of the custom figure
+var figureVertices17: [Point] = []
+figureVertices17.append(Point(x: 240, y: 150))
+figureVertices17.append(Point(x: 214, y: 140))
+figureVertices17.append(Point(x: 230, y: 120))
+
+canvas.drawCustomShape(with: figureVertices17)
+
+canvas.highPerformance = false
+
+// eyelash 14
+
+// Express the vertices of the custom figure
+var figureVertices18: [Point] = []
+figureVertices18.append(Point(x: 235, y: 150))
+figureVertices18.append(Point(x: 201, y: 140))
+figureVertices18.append(Point(x: 220, y: 115))
+
+canvas.drawCustomShape(with: figureVertices18)
+
+canvas.highPerformance = false
+
+// eyelash 15
+
+// Express the vertices of the custom figure
+var figureVertices19: [Point] = []
+figureVertices19.append(Point(x: 225, y: 150))
+figureVertices19.append(Point(x: 183, y: 140))
+figureVertices19.append(Point(x: 210, y: 110))
+
+canvas.drawCustomShape(with: figureVertices19)
+
+canvas.highPerformance = false
+
+// eyelash 16
+
+// Express the vertices of the custom figure
+var figureVertices20: [Point] = []
+figureVertices20.append(Point(x: 200, y: 120))
+figureVertices20.append(Point(x: 185, y: 140))
+figureVertices20.append(Point(x: 190, y: 110))
+
+canvas.drawCustomShape(with: figureVertices20)
+
+canvas.highPerformance = false
+
+// eyelash 17
+
+// Express the vertices of the custom figure
+var figureVertices21: [Point] = []
+figureVertices21.append(Point(x: 210, y: 150))
+figureVertices21.append(Point(x: 170, y: 150))
+figureVertices21.append(Point(x: 180, y: 115))
+
+canvas.drawCustomShape(with: figureVertices21)
+
+canvas.highPerformance = false
+
+// eyelash 18
+
+// Express the vertices of the custom figure
+var figureVertices22: [Point] = []
+figureVertices22.append(Point(x: 220, y: 165))
+figureVertices22.append(Point(x: 170, y: 165))
+figureVertices22.append(Point(x: 170, y: 122))
+
+canvas.drawCustomShape(with: figureVertices22)
+
+// eyelash 19
+
+// Express the vertices of the custom figure
+var figureVertices23: [Point] = []
+figureVertices23.append(Point(x: 230, y: 180))
+figureVertices23.append(Point(x: 170, y: 170))
+figureVertices23.append(Point(x: 162, y: 129))
+
+canvas.drawCustomShape(with: figureVertices23)
+
+// eyelash 20
+
+// Express the vertices of the custom figure
+var figureVertices24: [Point] = []
+figureVertices24.append(Point(x: 150, y: 150))
+figureVertices24.append(Point(x: 150, y: 135))
+figureVertices24.append(Point(x: 170, y: 140))
+
+canvas.drawCustomShape(with: figureVertices24)
+    
+
+canvas.highPerformance = false
 
 // eye border
 
@@ -244,7 +473,11 @@ canvas.drawEllipse(at: Point (x: 200, y: 155), width: 5, height: 15)
 
 
 
+// eye shine
 
+canvas.fillColor = .white
+
+canvas.drawEllipse(at: Point (x: 215, y: 160), width: 25, height: 12)
 
 
 
