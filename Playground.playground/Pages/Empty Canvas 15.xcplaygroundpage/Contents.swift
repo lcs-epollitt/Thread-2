@@ -70,9 +70,27 @@ canvas.drawRectangle(at: Point (x: 0, y: 400), width: 400, height: 200)
 
 // pavement text
 
+
 canvas.textColor =  Color (hue: 33, saturation: 82, brightness: 80, alpha: 100)
 
+canvas.drawText(message: "April 24, 1997", at: Point(x: 15, y: 550), size: 12)
+
+canvas.drawText(message: "Liberty Hall", at: Point (x: 15, y: 530), size: 12)
+
+canvas.drawText(message: "Lawrence, Kansas,", at: Point(x: 15, y: 510), size: 12)
+
+canvas.drawText(message: "United States", at: Point (x: 15, y: 490), size: 12)
+
+
 canvas.drawText(message: "Pavement", at: Point (x: 15, y: 400), size: 50)
+
+canvas.drawText(message: "Featuring:", at: Point (x: 290, y: 550), size: 12)
+
+canvas.drawText(message: "Sonic Youth", at: Point (x: 290, y: 530), size: 12)
+
+canvas.drawText(message: "Cibo Matto", at: Point (x: 290, y: 510), size: 12)
+
+canvas.drawText(message: "Beastie Boys", at: Point (x: 290, y: 490), size: 12)
 
 
 
@@ -480,9 +498,6 @@ canvas.fillColor = .white
 canvas.drawEllipse(at: Point (x: 215, y: 160), width: 25, height: 12)
 
 
-
-// Show a grid
-canvas.drawAxes(withScale: true, by: 50, color: .white)
 
 /*:
  ## Show the Live View
