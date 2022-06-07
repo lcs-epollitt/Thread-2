@@ -1,10 +1,10 @@
 //: [Previous](@previous) / [Next](@next)
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
+let preferredWidth = 800
 let preferredHeight = 600
 /*:
  ## Required code
@@ -52,10 +52,12 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  ## Add your code
  
  Beginning on line 61, you can add your own code.
-  
+ 
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
+
+canvas.highPerformance = true
 
 // Begin writing your code below (you can remove the examples shown)
 let scale = 20
@@ -66,45 +68,61 @@ let diagonal = Int (sqrt(2)*Double(scale))
 
 // create arrow function
 func drawArrow() {
-t.penUp()
-//t.drawSelf()
-t.left(by: 90)
-t.forward(steps: 2 * scale)
-t.right(by: 90)
-t.penDown()
-t.forward(steps: 4 * scale)
-t.penUp()
-t.right(by: 90)
-t.penDown()
-t.forward(steps: 2 * scale)
-t.left(by: 135)
-t.forward(steps: 3 * diagonal)
-t.right(by: -90)
-t.forward(steps: 3 * diagonal)
-t.left(by: 135)
-t.forward(steps: 2 * scale)
-t.left(by: -90)
-t.forward(steps: 4 * scale)
-t.left(by: 90)
-t.forward(steps: 2 * scale)
-t.left(by: 90)
-t.penUp()
-t.forward(steps: 7 * scale)
-t.right(by: 90)
-t.forward(steps: 2 * scale)
-t.left(by: 90)
-t.penDown()
+    t.penUp()
+    //t.drawSelf()
+    t.left(by: 90)
+    t.forward(steps: 2 * scale)
+    t.right(by: 90)
+    t.penDown()
+    t.forward(steps: 4 * scale)
+    t.penUp()
+    t.right(by: 90)
+    t.penDown()
+    t.forward(steps: 2 * scale)
+    t.left(by: 135)
+    t.forward(steps: 3 * diagonal)
+    t.right(by: -90)
+    t.forward(steps: 3 * diagonal)
+    t.left(by: 135)
+    t.forward(steps: 2 * scale)
+    t.left(by: -90)
+    t.forward(steps: 4 * scale)
+    t.left(by: 90)
+    t.forward(steps: 2 * scale)
+    t.left(by: 90)
+    t.penUp()
+    t.forward(steps: 7 * scale)
+    t.right(by: 90)
+    t.forward(steps: 2 * scale)
+    t.left(by: 90)
+    t.penDown()
+
+    
 }
 
 
 // loop
 
-for _ in 1...4{
-    drawArrow()
+for _ in 1...4 {
+    // a row of arrows
+    for _ in 1...4{
+        drawArrow()
+    }
+
+    // get into position to get new row
+    t.penUp()
+    t.backward(steps: 28 * scale)
+    t.left(by: 90)
+    t.forward(steps: 6 * scale)
+    t.right(by: 90)
+  
+    
 }
 
 
 
+
+canvas.highPerformance = false
 
 /*:
  ## Show the Live View
@@ -113,7 +131,7 @@ for _ in 1...4{
  Remember to show the Live View (1 then 2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
