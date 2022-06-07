@@ -60,7 +60,14 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 // Begin writing your code below (you can remove the examples shown)
 let scale = 20
 let diagonal = Int (sqrt(2)*Double(scale))
-t.drawSelf()
+
+
+
+
+// create arrow function
+func drawArrow() {
+t.penUp()
+//t.drawSelf()
 t.left(by: 90)
 t.forward(steps: 2 * scale)
 t.right(by: 90)
@@ -80,9 +87,21 @@ t.left(by: -90)
 t.forward(steps: 4 * scale)
 t.left(by: 90)
 t.forward(steps: 2 * scale)
+t.left(by: 90)
+t.penUp()
+t.forward(steps: 7 * scale)
+t.right(by: 90)
+t.forward(steps: 2 * scale)
+t.left(by: 90)
+t.penDown()
+}
 
 
+// loop
 
+for _ in 1...4{
+    drawArrow()
+}
 
 
 
