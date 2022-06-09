@@ -55,112 +55,139 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
-let scale = 20
+let scale = 10
 let diagonal = Int (sqrt(2)*Double(scale))
 
 canvas.highPerformance = false
 t.drawSelf()
 
-// prep for first angle
-t.penUp()
-t.forward(steps: 2 * scale)
-t.penDown()
-t.left(by: 135)
 
-// draw first line
+for _ in 1...4 {
+    // prep for first angle
+    t.penUp()
+    t.forward(steps: 2 * scale)
+    t.penDown()
+    t.left(by: 135)
 
-t.forward(steps: 2 * diagonal)
+    // draw first line
 
-// prep for second angle
+    t.forward(steps: 2 * diagonal)
 
-t.right(by: 90)
+    // prep for second angle
 
-// second line
+    t.right(by: 90)
 
-t.forward(steps: 2 * diagonal)
+    // second line
 
-// prep for 3rd qngle
+    t.forward(steps: 2 * diagonal)
 
-t.left(by: 90)
+    // prep for 3rd qngle
 
-//3rd line
+    t.left(by: 90)
 
-t.forward(steps: 2 * diagonal)
+    //3rd line
 
-// prep 4 4th
+    t.forward(steps: 2 * diagonal)
 
-t.right(by: 90)
+    // prep 4 4th
 
-// 4th line
+    t.right(by: 90)
 
-t.forward(steps: 2 * diagonal)
+    // 4th line
 
-
-// prep for 5th
-
-t.right(by: 90)
-
-// 5th
-
-t.forward(steps: 2 * diagonal)
-
-// prep 4 6th
-
-t.left(by: 90)
-
-// 6th
-
-t.forward(steps: 2 * diagonal)
-
-// prep 4 7th
-
-t.right(by: 90)
-
-// 7th
-
-t.forward(steps: 2 * diagonal)
-
-// prep 4 8th
-
-t.right(by: 90)
-
-// 8th
-
-t.forward(steps: 2 * diagonal)
-
-// prep 4 9th
-
-t.left(by: 90)
-
-// 9th
-
-t.forward(steps: 2 * diagonal)
-
-// prep 4 10th
-
-t.right(by: 90)
-
-// 10th
-
-t.forward(steps: 2 * diagonal)
-
-// prep 4 11th
-
-t.right(by: 90)
-
-// 11th
-
-t.forward(steps: 2 * diagonal)
-
-// prep 4 12th
-
-t.left(by: 90)
-
-// 12th
-
-t.forward(steps: 2 * diagonal)
+    t.forward(steps: 2 * diagonal)
 
 
+    // prep for 5th
+
+    t.right(by: 90)
+
+    // 5th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 6th
+
+    t.left(by: 90)
+
+    // 6th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 7th
+
+    t.right(by: 90)
+
+    // 7th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 8th
+
+    t.right(by: 90)
+
+    // 8th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 9th
+
+    t.left(by: 90)
+
+    // 9th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 10th
+
+    t.right(by: 90)
+
+    // 10th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 11th
+
+    t.right(by: 90)
+
+    // 11th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 12th
+
+    t.left(by: 90)
+
+    // 12th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep for next x
+
+    t.penUp()
+    t.right(by: 45)
+    t.forward(steps: 2 * scale)
+    t.right(by: 180)
+    t.penDown()
 
 
 
+    // prep for draw square
+
+    t.forward(steps: 3 * scale)
+    t.left(by: 90)
+    t.penUp()
+    t.forward(steps: 3 * scale)
+    t.right(by: 90)
+
+    // draw square
+    t.penDown()
+    t.forward(steps: 2 * scale)
+    for _ in 1...3 {
+        t.left(by: 90)
+        t.forward(steps: 2 * scale)
+    }
+
+
+
+}
