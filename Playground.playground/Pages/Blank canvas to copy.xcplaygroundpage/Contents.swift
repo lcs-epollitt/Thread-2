@@ -55,149 +55,194 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
-let scale = 20
+let scale = 10
 let diagonal = Int (sqrt(2)*Double(scale))
 
 canvas.highPerformance = true
 t.drawSelf()
 
-t.forward(steps: 5 * scale)
-func repeatPattern () {
+func squarething() {
+    // prep for first angle
+    t.penUp()
+    t.forward(steps: 2 * scale)
+    t.penDown()
+    t.left(by: 135)
+
+    // draw first line
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep for second angle
+
+    t.right(by: 90)
+
+    // second line
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep for 3rd qngle
+
+    t.left(by: 90)
+
+    //3rd line
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 4th
+
+    t.right(by: 90)
+
+    // 4th line
+
+    t.forward(steps: 2 * diagonal)
+
+
+    // prep for 5th
+
+    t.right(by: 90)
+
+    // 5th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 6th
+
+    t.left(by: 90)
+
+    // 6th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 7th
+
+    t.right(by: 90)
+
+    // 7th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 8th
+
+    t.right(by: 90)
+
+    // 8th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 9th
+
+    t.left(by: 90)
+
+    // 9th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 10th
+
+    t.right(by: 90)
+
+    // 10th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 11th
+
+    t.right(by: 90)
+
+    // 11th
+
+    t.forward(steps: 2 * diagonal)
+
+    // prep 4 12th
+
+    t.left(by: 90)
+
+    // 12th
+
+    t.forward(steps: 2 * diagonal)
+    
+    // prep for square
+    
+    t.currentPosition()
+    
+    t.right(by: 45)
+    
+    t.forward(steps: 2 * scale)
+    
+    t.right(by: 180)
+    
+    t.forward(steps: 3 * scale)
+    
+    t.left(by: 90)
+    
+    t.penUp()
+    
+    t.forward(steps: 3 * scale)
+    
+    t.right(by: 90)
+    
+    //sqaure
+    
+    t.penDown()
     for _ in 1...4 {
-        // prep for first angle
-        t.penUp()
         t.forward(steps: 2 * scale)
-        t.penDown()
-        t.left(by: 135)
-
-        // draw first line
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep for second angle
-
-        t.right(by: 90)
-
-        // second line
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep for 3rd qngle
-
+        
         t.left(by: 90)
-
-        //3rd line
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep 4 4th
-
-        t.right(by: 90)
-
-        // 4th line
-
-        t.forward(steps: 2 * diagonal)
-
-
-        // prep for 5th
-
-        t.right(by: 90)
-
-        // 5th
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep 4 6th
-
-        t.left(by: 90)
-
-        // 6th
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep 4 7th
-
-        t.right(by: 90)
-
-        // 7th
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep 4 8th
-
-        t.right(by: 90)
-
-        // 8th
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep 4 9th
-
-        t.left(by: 90)
-
-        // 9th
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep 4 10th
-
-        t.right(by: 90)
-
-        // 10th
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep 4 11th
-
-        t.right(by: 90)
-
-        // 11th
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep 4 12th
-
-        t.left(by: 90)
-
-        // 12th
-
-        t.forward(steps: 2 * diagonal)
-
-        // prep for next x
-
-        t.penUp()
-        t.right(by: 45)
-        t.forward(steps: 2 * scale)
-        t.right(by: 180)
-        t.penDown()
-
-
-
-        // prep for draw square
-
-        t.forward(steps: 3 * scale)
-        t.left(by: 90)
-        t.penUp()
-        t.forward(steps: 3 * scale)
-        t.right(by: 90)
-
-        // draw square
-        t.penDown()
-        t.forward(steps: 2 * scale)
-        for _ in 1...3 {
-            t.left(by: 90)
-            t.forward(steps: 2 * scale)
-        }
-
-
-
+        
     }
+   
+    
+    t.penUp()
+    
+    t.right(by: 90)
+    
+    t.forward(steps: 3 * scale)
+    
+    t.left(by: 90)
+    
+    t.backward(steps: 3 * scale)
+    
+    t.forward(steps: 8 * scale)
+    
+    
+    
+    
+
+    
+    
 
 
 
+    
 }
+      
+
+squarething()
+
+func rowOfSquareThing() {
+    // a row of square
+for _ in 1...5{
+        squarething()
+    }
+    t.left(by: 90)
+    t.forward(steps: 8 * scale)
+    t.left(by: 90)
+    t.forward(steps: 40 * scale)
+    t.right(by: 180)
+}
+   
+
+rowOfSquareThing()
+
+for _ in 1...6 {
+    rowOfSquareThing()
+}
+  
 
 
-repeatPattern()
+
+
 
 canvas.highPerformance = false
+
+    
